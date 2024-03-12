@@ -40,6 +40,7 @@ dependencies {
     implementation 'io.jmix.datatools:jmix-datatools-flowui-starter'
     implementation 'io.jmix.rest:jmix-rest-starter'
     implementation 'io.jmix.authserver:jmix-authserver-starter'
+    implementation 'io.jmix.oidc:jmix-oidc-starter'
     implementation 'io.jmix.bpm:jmix-bpm-flowui-starter'
     implementation 'io.jmix.bpm:jmix-bpm-starter'
     implementation 'io.jmix.bpm:jmix-bpm-rest-starter'
