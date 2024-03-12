@@ -11,7 +11,7 @@ public class SampleAuthorizedUrlsProvider implements AuthorizedUrlsProvider {
 
     @Override
     public Collection<String> getAuthenticatedUrlPatterns() {
-        return List.of("/authenticated/**");
+        return List.of("/authenticated/**", "/management/**", "/repository/**");
     }
 
     @Override

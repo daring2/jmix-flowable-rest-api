@@ -17,22 +17,26 @@ Authorization: Basic jmix-app Hw8jX5bhLQ3Dn4E7EV04Knppk9iWOC9t
 grant_type=password&scope=openid&username=johndoe&password=test
 
 > {%
-    client.global.set("jmix_token", response.body.access_token);
+    client.global.set("keycloak_token", response.body.access_token);
 %}
 
 ###
 GET http://localhost:8080/rest/entities/sb_User
 Accept: application/json
-Authorization: Bearer {{jmix_token}}
+Authorization: Bearer {{keycloak_token}}
 
 ###
 GET http://localhost:8080/rest/bpm/process/management/engine
 Accept: application/json
-Authorization: Bearer {{jmix_token}}
+Authorization: Bearer {{keycloak_token}}
 
 ###
 GET http://localhost:8080/anonymous/hello
 
 ###
 GET http://localhost:8080/authenticated/hello
-Authorization: Bearer {{jmix_token}}
+Authorization: Bearer {{keycloak_token}}
+
+###
+GET http://localhost:8080/rest/bpm/process/repository/process-definitions
+Authorization: Bearer {{keycloak_token}}
