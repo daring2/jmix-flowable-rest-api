@@ -28,10 +28,6 @@ public class JmixFlowableRestApiApplication implements AppShellConfigurator {
     @Autowired
     private Environment environment;
 
-    public static void main(String[] args) {
-        SpringApplication.run(JmixFlowableRestApiApplication.class, args);
-    }
-
     @Bean
     @Primary
     @ConfigurationProperties("main.datasource")
@@ -53,4 +49,9 @@ public class JmixFlowableRestApiApplication implements AppShellConfigurator {
                 + environment.getProperty("local.server.port")
                 + Strings.nullToEmpty(environment.getProperty("server.servlet.context-path")));
     }
+
+    public static void main(String[] args) {
+        SpringApplication.run(JmixFlowableRestApiApplication.class, args);
+    }
+
 }

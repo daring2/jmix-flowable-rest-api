@@ -29,3 +29,10 @@ Authorization: Bearer {{jmix_token}}
 GET http://localhost:8080/rest/bpm/process/management/engine
 Accept: application/json
 Authorization: Bearer {{jmix_token}}
+
+###
+GET http://localhost:8080/anonymous/hello
+
+###
+GET http://localhost:8080/authenticated/hello
+Authorization: Bearer {{jmix_token}}
